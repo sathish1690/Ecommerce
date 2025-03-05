@@ -1,0 +1,195 @@
+.cartpage {
+    position: relative;
+}
+.cartpage img{
+    height: 70px;
+
+}
+.cart-card{
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.cart-header-item {
+    font-size: 11px;
+    font-weight: 700;
+    min-height: 41px;
+    padding: 10px 20px 9px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d0d0d0;
+    background: #e8e3e3;
+}
+.cart-item-block {
+    display: table-cell;
+    padding: 20px 10px;
+}
+.cart-item-title{
+    width: 25%;
+}
+.cart-item-figure {
+    float: none;
+    width: 10%;
+    text-align: left;
+}
+.table > :not(:last-child) > :last-child > *{
+    border:none;
+}
+.cartpage-heading {
+    margin: 0 0 1rem;
+    font-size: 25px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.cart-totals {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    text-align: right;
+    width: 100%;
+}
+.cart-totals .cart-total-label {
+    text-align: right;
+}
+.cart-total-label, .cart-total-value {
+    padding: 5px 10px;
+}
+.cart-total:after, .cart-total:before {
+    content: " ";
+    display: table;
+}
+.cart-total-label, .cart-total-value {
+    font-size: 14px;
+    float: left;
+    padding: 1rem 0;
+    color: #000;
+}
+.cart-totals .cart-total-value {
+    width: 30%;
+}
+.cart-total-label, .cart-total-value {
+    font-size: 14px;
+    float: left;
+    padding: 1rem 0;
+    color: #000;
+}
+.cart-total-value {
+    text-align: right;
+}
+.coupon-code-add, .coupon-code-cancel, .gift-certificate-add, .gift-certificate-cancel, .shipping-estimate-hide, .shipping-estimate-show {
+    color: #989898;
+    padding: 0;
+    text-decoration: underline;
+    transition: color .15s ease;
+}
+.cart-totalcnt button {
+    border: 0;
+    font-size: 14px;
+}
+.cart-grant-total
+{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.cart-actions .btn.btn-primary.float-end {
+    width: 100%;
+    max-width: 300px;
+    background:#454545;
+    border:none;
+    border-radius: 0px;
+}
+span.dltbtn {
+    margin-left: 10px;
+    cursor: pointer;
+}
+button.increment-icon, button.decrement-icon{
+    //display: block;
+    background: 0 0;
+    border: none;
+    width: 40px;
+    height: 20px;
+}
+.estimator-form-label {
+    clear: both;
+    float: left;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.estimator-form-label .form-label {
+    line-height: 2.28571rem;
+    margin-bottom: 0;
+}
+.estimator-form-input {
+    float: right;
+    margin-bottom: 1em;
+    width: 60%;
+}
+.estimator-form .button--primary {
+    width:100%;
+}
+.estimator-form .button--primary, .coupon-code .button--primary, .gift-certificate-code .button--primary{
+    background: #454545;
+    border-color: #454545;
+    color: #fff;
+    width: 60%;
+    float: right;
+    padding: 9px;
+    font-size: 15px;
+}
+.shipping-quotes {
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.estimator-form-input input , .coupon-code input, .gift-certificate-code input{
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding: 8px;
+    border-radius: 0.25rem;
+}
+.form-label {
+    color: #666;
+    cursor: pointer;
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+.shipping-quotes ul  li {
+    list-style: none;
+}
+:-ms-input-placeholder { /* Edge 12-18 */
+    color: 666;
+    font-size: 0.9rem;
+  }
+  
+  ::placeholder {
+    color: 666;
+    font-size: 0.9rem;
+  }
+  .form--hiddenLabels .form-label {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.cart-gift-certificate-form .form-input, .coupon-form .form-input {
+    width: 78%;
+}
+.cart-gift-certificate-form .button, .coupon-form .button {
+    margin: 0 0 0 2%;
+    padding-left: 0.78571rem;
+    padding-right: 0.78571rem;
+    width: 20%;
+}
+.cart-form.coupon-code{
+ margin-bottom: 15px;
+}

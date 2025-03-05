@@ -1,0 +1,47 @@
+.sb-banner {
+    border: 1px solid #ebebeb;
+    padding: 20px 0;
+}
+.sb-banner .block-content {
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+}
+.sb-banner .banners {
+    color: #222;
+    display: inline-block;
+    width: 20%;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+.sb-banner .banners .banner-figcaption {
+    display: inline-block;
+    text-align: center;
+}
+.sb-banner .banners .banner-figure {
+    margin-bottom: 10px;
+    display: block;
+    line-height: 100%;
+    font-size: 32px;
+    color: #ff9600;
+    position: relative;
+}
+.sb-banner .banners .banner-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 5px;
+}
+.sb-banner .banners .banner-title>a {
+    color: #666;
+    text-decoration: none;
+}
+.sb-banner .banners .banner-text {
+    color: #999;
+    line-height: 100%;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+

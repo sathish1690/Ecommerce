@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-md navbar-light bg-dark p-0 header-sec">
+    <div class="container-fluid p-0">
+        <div class="col-lg-12 col-12 d-lg-flex p-2 pb-0">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <i class="fi fi-rr-menu-burger"></i>
+                
+              </button>
+               <a href="#" class="navbar-brand mb-3"><img src="../../../assets/img/logo.png" alt="logo" class="img-fluid"></a>
+               <div class="cartdetails col-lg-1 col-md-3 col d-block d-md-block d-lg-none float-end">
+                <span class="nav-progressive-content me-2">
+                    <i class="fi fi-ts-circle-user"></i> Sign in
+                  </span>
+                <span class="cart-icon">
+                    <i class="fi fi-tr-cart-shopping-fast"></i>
+                    <span class="addcard"> {{cartitems}} </span>
+                    <i class="fi fi-tr-cart-shopping-fast"></i>
+                </span>
+                
+            </div>
+
+               <div class="delivery-locicon col-lg-2 d-lg-flex d-none d-lg-block d-md-none">
+                <i class="fi fi-rs-marker mt-2"></i>
+              <div id="glow-ingress-block">
+                  <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
+                     Delivering to Chennai 600080
+                  </span>
+                  <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
+                     Update location
+                  </span>
+            
+            </div>
+        </div>
+            
+            <div class="seachBoxContainer col-lg-4 col-12 me-3">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                    <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Category" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+                    <!-- <input type="text" class="form-control" aria-label="Text input with dropdown button"> -->
+                    <div class="input-group-append"  routerLink="/category">
+                        <button class="btn btn-secondary" type="button">
+                          <i class="fi fi-br-search"></i>
+                        </button>
+                      </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col account">
+              <span routerLink="/login">
+                <span class="nav-line-1 nav-progressive-content d-none d-md-none d-lg-block">
+                  Hello, Sign in
+                </span>
+                <span class="nav-line-2 nav-progressive-content d-none d-md-none d-lg-block">
+                   Accounts & lists
+                </span>
+              </span>
+            </div>
+            <div class="col-lg-1 col-md-1 col returns ">
+                <span class="nav-line-1 nav-progressive-content d-none d-md-none d-lg-block" >
+                  Returns
+                </span>
+                <span class="nav-line-2 nav-progressive-content d-none d-md-none d-lg-block">
+                  & Orders
+                </span>
+            </div>
+
+            <div class="cartdetails col-lg-1 col-md-2 col d-none d-md-none d-lg-block">
+               <span  class="cart-icon" routerLink="/wishlist">
+                  <i class="fa-solid fa-heart"></i>
+                  <span class="addcard" >{{wishlist}} </span>
+                </span>
+                  <span class="cart-icon" routerLink="/cart-page">
+                    <i class="fi fi-tr-cart-shopping-fast"></i>
+                    <span class="addcard" >{{cartitems}} </span>
+                    
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="collapse navbar-collapse custom-nav ps-2 pe-2" id="navbar">
+            <div class="navbar-nav menu-info-list">
+                    <a class="nav-item nav-link" routerLink="/allproducts">All Product</a>
+                    <a href="#" class="nav-item nav-link">Ipad mini case</a>
+                    <a href="#" class="nav-item nav-link">Tablets &amp; Pc</a>
+                    <a href="#" class="nav-item nav-link">Laptops</a>
+                    <a href="#" class="nav-item nav-link">Monitors &amp; Destop</a>
+                    <a href="#" class="nav-item nav-link">Cameras &amp; Photo</a>
+                    <a href="#" class="nav-item nav-link">Iwatchs &amp; Ligeng</a>
+                    <a href="#" class="nav-item nav-link">jacket New</a>
+                    <a href="#" class="nav-item nav-link">Bikini</a> 
+                    <a href="#" class="nav-item nav-link">Shoes</a>
+                    <a href="#" class="nav-item nav-link">jacket</a>
+                    <a href="#" class="nav-item nav-link">Smartphones</a>
+                    <a href="#" class="nav-item nav-link">Makeup</a>
+               
+            </div>
+            
+        </div>
+    </div>
+    </div>
+</nav>

@@ -1,0 +1,39 @@
+<div class="container mt-5 mb-5" >
+    <div class="row">
+        <div class="col col-md-3 col-lg-3 d-none d-lg-block d-md-block">
+            <app-sidemenu></app-sidemenu>
+        </div>
+        <div class="col col-md-9 col-lg-9">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-md-4 float-end">
+                      <div class="mb-4 mt-2">
+                        <select class="form-control" [(ngModel)]="sortOption">
+                          <option value="title|asc">Sort By Name (A to Z)</option>
+                          <option value="title|desc">Sort By Name (Z to A)</option>
+                          <option value="price|lth">Sort By Price (Low to High)</option>
+                          <option value="price|htl">Sort By Price (High to Low)</option>
+                        </select>
+                      </div>
+                    </div>
+                    </div>
+
+                <div class="col col-md-4 col-lg-4 card-view" *ngFor="let allproduct of products | sortpipe:sortOption; let i=index">
+                    <div class="card card-cnt mb-3" >
+                        <img src="{{allproduct.image}}" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body viewall-card-body">
+                          <h5 class="card-title"><strong>{{allproduct.title| truncate}}</strong></h5>
+                          <!-- <p class="card-text viewall-card-text">{{allproduct.description | discriptiontruncate }}</p> -->
+                          <p class="card-price"><strong>{{allproduct.price | currency:'INR'}}</strong></p>
+                          <p class="d-flex">
+                          <a class="btn btn-warning" (click)="addtocart(allproduct)">Add to Cart</a>
+                           &nbsp;&nbsp;
+                          <a class="btn btn-default"  (click)="Wishlist(allproduct)">Add Wishlist</a>
+                        </p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

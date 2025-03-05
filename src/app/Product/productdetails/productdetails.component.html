@@ -1,0 +1,67 @@
+<section class="product">
+<div class="container mt-5 mb-5" >
+    <div class="row">
+        <div class="col col-md-3 col-lg-3 d-none d-lg-block d-md-block">
+            <app-sidemenu></app-sidemenu>
+        </div>
+
+   <div class="col col-md-9 col-12 col-lg-9 product-content">
+    <div class="row">
+        <div class="col col-md-6 col-12 col-lg-6">
+          <img src="{{productid.image}}" alt="image" class="img-fluid">
+        </div>
+        <div class="col col-md-6 col-12 col-lg-6">
+
+            <div class="productView-product">
+            <h4>{{productid.title}}</h4>
+            <div class="deals-star">
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <i class="fi fi-sr-star"></i>
+                <span class="productView-reviewLink">
+                    (No reviews yet)
+            </span>
+            </div>
+              <p class="price price--withoutTax">₹{{productid.price}}</p>
+              <p class="product-catagory"><span class="productView-info-name">Category :  </span> <span class="productView-info-value">{{productid.category}}</span></p>
+              <p class="product-rating"><span class="productView-info-name">Rating :  </span> <span class="productView-info-value">{{productid.rating.rate}}</span></p>
+              <p class="product-count"><span class="productView-info-name">Count :  </span><span class="productView-info-value"> {{productid.rating.count}}</span></p>
+            </div>
+
+            <!-- <div class="quantity mt-4">
+                <h5 class="quantity-title">Quantity</h5>
+                <div class="quantity-cnt">
+                    <input class="form-input form-input--incrementTotal" [(ngModel)]="counterValue" >
+                    <button (click)="increment(productid)" class="increment-icon"><i class="fi fi-rs-angle-small-up"></i></button>
+                    <button (click)="decrement(productid)" class="decrement-icon"><i class="fi fi-rs-angle-small-down"></i></button>
+                    <div>
+
+                    </div>
+                </div>
+                
+            </div> -->
+            
+            <div class="addcartbtns mt-4">
+                <button type="button" class="btn btn-warning" (click)="addtocart(productid)">Buy Now</button> &nbsp;
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Add to Wishlist
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Add to My Wish List</a></li>
+                      <li><a class="dropdown-item" href="#">Create New Wish List</a></li>
+                    </ul>
+                  </div>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-12 col-12 mt-5">
+        <h3 class="product-des">Description</h3>
+        <p>{{productid.description}}</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>

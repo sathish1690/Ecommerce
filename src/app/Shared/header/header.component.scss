@@ -1,0 +1,103 @@
+
+nav{
+    .container-fluid{
+        display: flow;
+    }
+ 
+ .nav-rw{
+    width: 100%;
+ }
+ button i{ color: #fff;}
+ button:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+    #glow-ingress-block, .returns, .account {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: static;
+        float: none;
+        -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    }
+     .nav-line-1 {
+        font-size: 11px;
+        line-height: 14px;
+        height: 14px;
+        font-weight: 400;
+        margin-top: 4px;
+        color: #ccc;
+    }
+    .nav-line-2 {
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: 700;
+        padding-bottom: 5px;
+        color: #fff;
+    }
+    .delivery-locicon{
+        color: #fff;
+    }
+    .input-group .btn.btn-secondary {
+        border-radius: 0px 5px 5px 0px;
+        border: none;
+        padding: 8px 14px;
+        background: #dec254;
+        color: #000;
+    }
+    .input-group .btn.btn-success {
+      background: #ffcaca;
+        border-radius: 05px 0px 0px 5px;
+        color: #000;
+        font-size: 13px;
+        border: none;
+        padding: 10.3px 14px;
+    }
+    .cartdetails{
+        color: #fff;
+    }
+    .navbar-nav a{
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 6px 10px;
+    }
+    .cartdetails i{
+        font-size:  25px;
+    }
+    .car-cnt{
+        font-size:  15px;
+        font-weight: bold;
+    }
+    span.addcard {
+        background: #ff3c20;
+        border-radius: 100%;
+        position: relative;
+        top: 0px;
+        left: -7px;
+        font-size: 13px;
+        font-weight: bold;
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        text-align: center;
+    }
+    .custom-nav{
+        background: #232f3e;
+    }
+    span.cart-icon {
+        cursor: pointer;
+    }
+
+    ::ng-deep .mat-mdc-autocomplete-trigger,  ::ng-deep .mat-mdc-autocomplete-trigger:focus-visible {
+        padding: 8px 7px;
+        border-radius: 0px;
+        margin-top: 0px;
+        border: 0px;
+        outline: none;
+    }
+}

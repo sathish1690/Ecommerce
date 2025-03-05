@@ -1,0 +1,62 @@
+
+
+<section class="wishlist">
+    <div class="container mb-4 mt-4">
+        <h2 class="page-heading mb-3 mt-4">Wish List: My Wish List</h2>
+        <div class="row"> 
+        <div class="deals-cnt col-lg-3 col-6 text-center mb-4" *ngFor="let items of wishlist;" >
+            <div class="left-block">
+                <div class="sale-flag-discount">
+                  <span class="sale-text">17%</span>
+                </div>
+                <div class="deals-figure">
+                    <img src="{{items.image}}" alt="category" class="img-fluid">
+                </div>
+                <div class="deals-button button-left">
+                    <div class="action-item button-cart">
+                        <button class="action-link btn-cart">
+                            <i class="fi fi-br-cart-shopping-fast"></i>
+                            <span>Add a Cart</span>
+                        </button>
+                    </div>
+                    
+                    <div class="action-item button-wishlist">
+                        <button  class="action-link btn-wishlist">
+                            <i class="fi fi-ss-heart"></i>
+                            <span>Add to Wish List</span>
+                        </button>
+                    </div>
+                    <div class="action-item button-search">
+                        <button class="action-link btn-search">
+                            <i class="fi fi-br-search"></i>
+                            <span>Quick view</span>
+                        </button>
+                    </div>
+               </div>
+            </div>
+            <div class="right-block">
+           
+            <div class="deals-figcaption">
+                    <div class="deals-body">
+                        <h5 class="deals-title">{{items.title}}</h5>
+                        <!-- <h5 class="deals-title"><a href="">{{productdatas.rating.count}}</a></h5> -->
+                      </div>
+                </div>
+                <div class="deals-star">
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                    <i class="fi fi-ss-star"></i>
+                </div>
+                <div class="deals-price">
+                    <span class="price-original">{{items.price| currency:'INR'}} </span>
+                </div>
+            </div>
+            <p class="btn btn-secondary" (click)="remove(items.id)">Remove</p>
+          </div>
+        </div>
+    </div>
+</section>
+
+

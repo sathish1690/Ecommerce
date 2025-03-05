@@ -1,0 +1,23 @@
+
+<section class="shopcategory mt-5 mb-5">
+    <div class="container module1 shopcategory-category">
+        <h5 class="block-title"> <span>SHOP BY CATEGORIES</span></h5>
+            <div class="block-content clearfix d-flex flex-row">
+    <div class="shopcategorydtls" *ngFor="let productdata of shopCatagory; let i = index">
+        <div class="shopcategory-figure">
+            <img [src]="productdata.image" alt="category" class="img-fluid">
+        </div>
+        <div class="shopcategory-figcaption">
+            <div class="shopcategory-body">
+                <h5 class="shopcategory-title"><a href="">{{productdata.category}}</a></h5>
+            </div>
+        </div>
+    </div>
+            
+                
+        </div>
+    </div>
+    
+    </section>
+    
+    

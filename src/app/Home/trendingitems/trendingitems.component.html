@@ -1,0 +1,85 @@
+<section class="trending-items mt-5 mb-5">
+    <div class="container module1 trenditems-category">
+        <h5 class="block-title"> <span>Trending Jewelery</span></h5>
+            <div class="block-content clearfix d-flex flex-row">
+    <div class="trenditemsdtls" *ngFor="let trenditems of trendingItems;">
+        <div class="left-block">
+            <div class="sale-flag-discount">
+                <span class="sale-text">-17%</span>
+            </div>
+            <div class="deals-figure">
+                <img [src]="trenditems.image" alt="category" class="img-fluid">
+            </div>
+            <div class="deals-button button-left">
+                <div class="action-item button-cart">
+                    <button class="action-link btn-cart">
+                        <i class="fi fi-br-cart-shopping-fast"></i>
+                        <span>Add a Cart</span>
+                    </button>
+                </div>
+                
+                <div class="action-item button-wishlist">
+                    <button  class="action-link btn-wishlist">
+                        <i class="fi fi-ss-heart"></i>
+                        <span>Add to Wish List</span>
+                    </button>
+                </div>
+                <div class="action-item button-search">
+                    <button class="action-link btn-search">
+                        <i class="fi fi-br-search"></i>
+                        <span>Quick view</span>
+                    </button>
+                </div>
+           </div>
+        </div>
+        <div class="right-block">
+       
+        <div class="deals-figcaption">
+                <div class="deals-body">
+                    <h5 class="deals-title"><a href="">{{trenditems.category}}</a></h5>
+                </div>
+            </div>
+            <div class="deals-star">
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+                <i class="fi fi-ss-star"></i>
+            </div>
+            <div class="deals-price">
+                <span class="price-original">₹{{ trenditems.price }}</span> <span class="price-offer">₹ {{ trenditems.price}} </span>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="logo-slider">
+<div class="container">
+    <owl-carousel-o [options]="logoSlider">
+              
+        <ng-template carouselSlide class="active">
+           <a href=""><img src="../../../assets/img/b2.webp" alt="category" class="img-fluid"></a>
+        </ng-template>  
+        <ng-template carouselSlide>
+          <a href=""><img src="../../../assets/img/b3.webp" alt="category" class="img-fluid"></a>
+        </ng-template>                 
+        <ng-template carouselSlide class="active">
+            <a href=""><img src="../../../assets/img/b4.webp" alt="category" class="img-fluid"></a>
+         </ng-template>  
+         <ng-template carouselSlide>
+           <a href=""><img src="../../../assets/img/b5.webp" alt="category" class="img-fluid"></a>
+         </ng-template>  
+         <ng-template carouselSlide>
+            <a href=""><img src="../../../assets/img/b6.webp" alt="category" class="img-fluid"></a>
+          </ng-template>  
+          <ng-template carouselSlide>
+            <a href=""><img src="../../../assets/img/b3.webp" alt="category" class="img-fluid"></a>
+          </ng-template>                 
+          <ng-template carouselSlide class="active">
+              <a href=""><img src="../../../assets/img/b4.webp" alt="category" class="img-fluid"></a>
+           </ng-template>  
+</owl-carousel-o>
+</div>
+</section>

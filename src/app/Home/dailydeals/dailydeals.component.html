@@ -1,0 +1,154 @@
+<section class="daildeals mt-5 mb-5">
+    <div class="container">
+     <img class="img-fluid" src="../../../assets/img/bn-2.png" alt="offer">
+    </div>
+  </section>
+  <section class="daildeals mt-5 mb-5">
+      <div class="container module">
+          <div class="row">
+              <div class="col-12 col-lg-4">
+                 
+                  <div class="daildeals-cnt">
+                      <h5 class="block-title"> <span>Daily Deals</span></h5>
+                      <owl-carousel-o [options]="customOptions">
+                  
+                        <ng-template carouselSlide class="active">
+                            <div class="shopcategorydtls">
+                                <div class="shopcategory-figure">
+                                  
+                                        <a href=""><img src="../../../assets/img/daily.jpg" alt="category" class="img-fluid"></a>
+                                </div>
+                                <div class="shopcategory-figcaption">
+                                    <div class="shopcategory-body">
+                                        <h5 class="shopcategory-title"><a href="">Donec et libero nunc quis facilisis odio</a></h5>
+                                        <div class="price-section price-section--withoutTax ">
+                                            <span data-product-price-without-tax="" class="price price--withoutTax">$300.00</span>
+                                            <span data-product-price-without-tax="" class="price price--noSaleWithoutTax">$470.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>  
+                        <ng-template carouselSlide>
+                            <div class="shopcategorydtls">
+                                <div class="shopcategory-figure">
+                                  
+                                        <a href=""><img src="../../../assets/img/daily.jpg" alt="category" class="img-fluid"></a>
+                                </div>
+                                <div class="shopcategory-figcaption">
+                                    <div class="shopcategory-body">
+                                        <h5 class="shopcategory-title"><a href="">Donec et libero nunc quis facilisis odio</a></h5>
+                                        <div class="price-section price-section--withoutTax ">
+                                            <span data-product-price-without-tax="" class="price price--withoutTax">$300.00</span>
+                                            <span data-product-price-without-tax="" class="price price--noSaleWithoutTax">$470.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>                 
+                       
+                </owl-carousel-o>
+                  </div>
+              </div>
+              <div class="col-12 col-lg-8">
+                  <h5 class="block-title"> <span>Sports</span></h5>
+                 <div class="row">
+                    <div class="deals-cnt col-lg-3 col-6 text-center mb-4" *ngFor="let productdatas of products; let i = index">
+                      <div *ngIf="i<8">
+                      <div class="left-block">
+                          <div class="sale-flag-discount" *ngIf="productdatas.discount">
+                            <span class="sale-text">{{productdatas.discount}}%</span>
+                            <!-- <span  *ngFor="let discountdata of discount.products;let i = index" >
+                              <span class="sale-text" *ngIf="i<1">{{discountdata.discountPercentage}}%</span> 
+                                </span> -->
+                          </div>
+                          <div class="deals-figure">
+                              <img src="{{productdatas.image}}" alt="category" class="img-fluid" (click)="productdetails(productdatas.id)">
+                          </div>
+                          <div class="deals-button button-left">
+                              <div class="action-item button-cart" (click)="addtocart(productdatas)">
+                                  <button class="action-link btn-cart">
+                                      <i class="fi fi-br-cart-shopping-fast"></i>
+                                      <span>Add a Cart</span>
+                                  </button>
+                              </div>
+                              
+                              <div class="action-item button-wishlist" (click)="Wishlist(productdatas)" *ngIf="Wishlist">
+                                  <button  class="action-link btn-wishlist">
+                                      <i class="fi fi-ss-heart"></i>
+                                      <span>Add to Wish List</span>
+                                  </button>
+                              </div>
+                              <div class="action-item button-search">
+                                  <button class="action-link btn-search">
+                                      <i class="fi fi-br-search"></i>
+                                      <span>Quick view</span>
+                                  </button>
+                              </div>
+                         </div>
+                      </div>
+                      <div class="right-block">
+                     
+                      <div class="deals-figcaption">
+                              <div class="deals-body">
+                                  <h5 class="deals-title"><a href="">{{productdatas.title}}</a></h5>
+                                  <!-- <h5 class="deals-title"><a href="">{{productdatas.rating.count}}</a></h5> -->
+                                </div>
+                          </div>
+                          <div class="deals-star">
+                              <i class="fi fi-ss-star"></i>
+                              <i class="fi fi-ss-star"></i>
+                              <i class="fi fi-ss-star"></i>
+                              <i class="fi fi-ss-star"></i>
+                              <i class="fi fi-ss-star"></i>
+                          </div>
+                          <div class="deals-price">
+                              <span class="price-original">₹{{productdatas.discountedPrice |number : '1.2-2'}}</span> <span class="price-offer">₹{{ productdatas.price| number : '1.2-2'}} </span>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+                 </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section>
+      <div class="container">
+          
+      <owl-carousel-o [options]="offerOptions">
+          <ng-template carouselSlide class="active">
+            <div class="shopcategorydtls">
+                <div class="shopcategory-figure">
+                  
+                        <a href=""><img src="../../../assets/img/bn-5.jpg" alt="category" class="img-fluid"></a>
+                </div>
+                
+            </div>
+          </ng-template>  
+          <ng-template carouselSlide>
+              <div class="shopcategorydtls">
+                  <div class="shopcategory-figure">
+                    
+  
+                          <a href=""><img src="../../../assets/img/bn-4.jpg" alt="category" class="img-fluid"></a>
+                  </div>
+                  
+              </div>
+          </ng-template>                 
+          <ng-template carouselSlide>
+              <div class="shopcategorydtls">
+                  <div class="shopcategory-figure">
+                          <a href=""><img src="../../../assets/img/bn-3.png" alt="category" class="img-fluid"></a>
+                  </div>
+                  
+              </div>
+          </ng-template>       
+  </owl-carousel-o>
+  </div>
+  </section> 
+
+
+
+ 

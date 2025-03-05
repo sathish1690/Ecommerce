@@ -1,0 +1,49 @@
+.card-view{
+    display: flex;
+    flex-direction: column;
+}
+.card.card-cnt{
+    flex: 1 0 auto;
+    box-shadow: 0px 0px 4px #a09797;
+}
+.viewall-card-body{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+// .viewall-card-text {
+//     flex-grow: 1;
+//     font-size: 14px;
+// }
+.card-title{
+    font-size: 17px;
+}
+.card-price {
+    flex-grow: 1;
+    font-size: 20px;
+}
+.card-cnt img {
+    height: 180px;
+    width: 150px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.btn-warning{
+    background: #ff9600;
+    color: #fff;
+    font-size: 15px;
+    padding: 9px 9px;
+    border-radius: 0px;
+}
+.btn-default{
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+    padding: 9px 9px;
+    border-radius: 0px;
+    border: 1px solid #333;
+}

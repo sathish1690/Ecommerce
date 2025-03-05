@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../src/media-queries.scss';
+@import '../node_modules/@flaticon/flaticon-uicons/css/all/all.css';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
+.owl-theme .owl-nav [class*=owl-]  {
+    color: #FFF;
+    font-size: 1px;
+    margin: 5px;
+    width: 30px;
+    height: 6px;
+    padding: 2px 10px!important;
+    background: #222!important;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+    border-radius: 3px!important;
+}
+.owl-theme .owl-nav [class*=owl-]:hover, .owl-theme .owl-nav [class*=owl-]:active  {
+    background: #ff9600!important;
+    color: #FFF;
+    text-decoration: none;
+}
+.owl-theme .owl-nav [class*=owl-]{
+    color: #999!important;
+}
+.owl-next i.fi.fi-sr-angle-right {
+    color: #999;
+    font-size: 16px;
+    position: absolute;
+    top: -50px;
+    text-align: right;
+    right: 0px;
+}
+.owl-prev i.fi.fi-sr-angle-left {
+    color: #999;
+    font-size: 16px;
+    position: absolute;
+    top: -50px;
+    text-align: right;
+    right: 20px;
+}

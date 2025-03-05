@@ -1,0 +1,113 @@
+.deals-star .fi {
+    color: #999;
+    font-size: 10px;
+    margin-right: 5px;
+}
+.product-content h4{
+    font-size: 22px;
+    margin: 0 0 15px;
+    color: #222;
+    font-weight: 700;
+}
+.productView-reviewLink {
+    display: inline-block;
+    margin-left: 0.78571rem;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.price.price--withoutTax {
+    color: #ff9600;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.productView-info-name{
+min-width: 150px;
+    float: left;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+}
+.productView-product {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 2rem;
+}
+.productView-product p {
+    margin: 6px 0px;
+}
+
+span.productView-info-value {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.quantity-cnt {
+    border: 1px solid #d7d7d7;
+        display: inline-block;
+    }
+    input.form-input.form-input--incrementTotal {
+        width: 55px;
+        height: 40px;
+        border: none;
+        padding: 0;
+        text-align: center;
+        float: left;
+        border-radius: 0;
+        border-right: 1px solid #ddd;
+    }
+    
+    .form-input--incrementTotal {
+        border: 0;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 700;
+        height: auto;
+        padding: 0;
+        text-align: center;
+        vertical-align: middle;
+        width: 2.5rem;
+    }
+    
+button.increment-icon, button.decrement-icon {
+    display: block;
+    background: 0 0;
+    border: none;
+    width: 40px;
+    height: 20px;
+}
+h5.quantity-title {
+    font-size: 14px;
+    margin-bottom: 0.78571rem;
+}
+button.btn.btn-warning {
+    background:#ff9600;
+    color:#fff;
+    font-size:15px;
+    padding: 9px 20px;
+    border-radius: 0px;
+}
+button.btn.btn-warning:focus, button.btn.btn-secondary:focus{
+    box-shadow:none;
+}
+
+button.btn.btn-secondary{
+    background:#fff;
+    color:#333;
+    font-size:15px;
+    padding: 9px 20px;
+    border-radius: 0px;
+    border:1px solid #ccc;
+}
+h3.product-des {
+    font-weight: 700;
+    border: none;
+    color: #222;
+    padding: 11px 0px;
+    margin: 0;
+    border-radius: 0;
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.product-content img {
+    height: 400px;
+}

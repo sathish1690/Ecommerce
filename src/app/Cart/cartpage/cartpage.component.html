@@ -1,0 +1,183 @@
+<div class="container mt-5 cartpage">
+
+  <div *ngIf="showProduct.length!=0;">
+    <h1 class="cartpage-heading">Your Cart ({{totalcartitems}} Items)</h1>
+    <div class="row">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="cart-header text-center">
+          <tr>
+            <th scope="col" class="cart-header-item">Image</th>
+            <th scope="col" class="cart-header-item">Title</th>
+            <th scope="col" class="cart-header-item">Catagory</th>
+            <th scope="col" class="cart-header-item">Quantity</th>
+            <th scope="col" class="cart-header-item">Price</th>
+            <th scope="col" class="cart-header-item">Total</th>
+            <!-- <th scope="col" class="cart-header-item">Action</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let items of showProduct; let i=index " class="cart-item text-center">
+            <td class="cart-item-block cart-item-figure"><img src="{{items.image}}"></td>
+            <td class="cart-item-block cart-item-title">{{items.title}}</td>
+            <td class="cart-item-block cart-item-category">{{items.category}}</td>
+            <td class="cart-item-block cart-item-quantity">
+               <button (click)="decrement(items)" class="decrement-icon"><i class="fi fi-rs-angle-small-down"></i></button> 
+              <strong>{{items.totalQuantity}}</strong> 
+              
+              <button (click)="increment(items)" class="increment-icon"><i class="fi fi-rs-angle-small-up"></i></button> 
+            </td>
+            <td class="cart-item-block cart-item-price" *ngIf="items.discountedPrice"><strong>₹{{items.discountedPrice|number : '1.2-2'}} *  {{items.totalQuantity}} </strong></td>
+            <td class="cart-item-block cart-item-price" *ngIf="!items.discountedPrice"><strong>₹{{items.price|number : '1.2-2'}}</strong></td>
+            <td class="cart-item-block cart-item-totalprice" *ngIf="!items.totalpricebyDiscount"><strong>₹{{items.totalpricebyid | number : '1.2-2'}}</strong> 
+              <span class="dltbtn" (click)="deleteitem(items.id)"> x </span>
+            </td>
+            <td class="cart-item-block cart-item-totalprice" *ngIf="items.totalpricebyDiscount"><strong>₹{{items.totalpricebyDiscount | number : '1.2-2'}}</strong> 
+              <span class="dltbtn" (click)="deleteitem(items.id)"> x </span>
+            </td>
+            <!-- <td class="cart-item-block cart-item-title"></td> -->
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+    <div class="clearfix"></div>
+    <div class="row">
+    <div class="col-12 col-lg-6 offset-lg-4 col-md-8 offset-md-2 cart-totalcnt">
+      <div class="row">
+           <div class="col-6 col-lg-6 col-md-6">
+              <p class="substotal text-end"> <strong> Subtotal:</strong> </p>
+           </div>
+           <div class="col-6 col-lg-6 col-md-6">
+            <p class="substotal text-end">₹{{totalamount|number : '1.2-2'}}</p>
+         </div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-lg-6 col-md-6">
+             <p class="substotal text-end"><strong>  Shipping:</strong> </p>
+          </div>
+          <div class="col-6 col-lg-6 col-md-6">
+           <p class="substotal text-end"> 
+            <button class="shipping-estimate-show" (click)="onclickShipping()">{{shippinghidden ?"Add Info":"Cancel"}}</button>
+            <!-- <button class="shipping-estimate-hide"  >Cancel</button> -->
+          </p>
+         
+        </div>
+        <div class="shipping-estimator" *ngIf="shippingshow">
+          <form class="form estimator-form" data-shipping-estimator="">
+              <dl>
+                  <dt class="estimator-form-label">
+                      <label class="form-label" for="shipping-country">Country</label>
+                  </dt>
+      
+                  <dd class="estimator-form-input form-field--success">
+                      <select class="form-select" id="shipping-country" name="shipping-country" data-field-type="Country">
+                          <option>Country</option>
+                              <option value="232" selected="selected">
+                                  Viet Nam
+                              </option>
+                      </select>
+                  <span style="display: none;" class="nod-success-message"></span></dd>
+      
+                  <dt class="estimator-form-label">
+                      <label class="form-label" for="shipping-state">State/province</label>
+                  </dt>
+      
+                  <dd class="estimator-form-input">
+                          <input class="form-input" type="text" id="shipping-state" name="shipping-state" data-field-type="State" placeholder="State/province">
+                  </dd>
+      
+                  <dt class="estimator-form-label">
+                      <label class="form-label" for="shipping-city">Suburb/city</label>
+                  </dt>
+                  <dd class="estimator-form-input">
+                      <input class="form-input" type="text" id="shipping-city" name="shipping-city" value="" placeholder="Suburb/city">
+                  </dd>
+      
+                  <dt class="estimator-form-label">
+                      <label class="form-label" for="shipping-zip">Zip/postcode</label>
+                  </dt>
+                  <dd class="estimator-form-input">
+                      <input class="form-input" type="text" id="shipping-zip" name="shipping-zip" value="" placeholder="Zip/postcode">
+                  </dd>
+                  <button class="button button--primary button--small shipping-estimate-submit">Estimate Shipping</button>
+              </dl>
+          </form>
+          <div class="shipping-quotes">    There was a problem retrieving your shipping quote
+          <ul>
+                  <li>Please enter a valid zip code/postcode or state.</li>
+          </ul>
+      </div>
+      </div>
+       </div>
+       <div class="row">
+        <div class="col-6 col-lg-6 col-md-6">
+           <p class="substotal text-end"> <strong> Coupon Code:</strong> </p>
+        </div>
+     
+        <div class="col-6 col-lg-6 col-md-6">
+         <p class="substotal text-end">
+          <button class="coupon-code-add" (click)="onclickCoupon()">{{couponhidden ?"Add Coupon":"Cancel"}}</button>
+
+          <!-- <button class="coupon-code-cancel" style="display: none;">Cancel</button> -->
+         </p>
+      </div>
+      <div class="cart-form coupon-code" *ngIf="couponshow">
+        <form class="form form--hiddenLabels coupon-form">
+            <label class="form-label" for="couponcode">Enter your coupon code</label>
+            <input class="form-input" data-error="Please enter your coupon code." id="couponcode" type="text" name="couponcode" value="" placeholder="Enter your coupon code">
+            <button class="button button--primary button--small shipping-estimate-submit"> Apply</button>
+            <input type="hidden" name="action" value="applycoupon">
+        </form>
+    </div>
+     </div>
+     <div class="row">
+      <div class="col-6 col-lg-6 col-md-6">
+         <p class="substotal text-end"><strong>Gift Certificate:</strong> </p>
+      </div>
+      <div class="col-6 col-lg-6 col-md-6">
+       <p class="substotal text-end">
+        <button class="gift-certificate-add" (click)="onclickGift()">{{gifthidden ?"Gift Certificate":"Cancel"}}</button>
+       
+       </p>
+
+    </div>
+    <div class="cart-form gift-certificate-code" *ngIf="giftshow">
+      <form class="form form--hiddenLabels cart-gift-certificate-form">
+          <label class="form-label" for="certcode">Enter your certificate code</label>
+          <input class="form-input" data-error="Please enter your valid certificate code." id="certcode" type="text" name="certcode" value="" placeholder="Add Certificate">
+          <button class="button button--primary button--small shipping-estimate-submit"> Apply</button>
+      </form>
+  </div>
+   </div>
+   <div class="row cart-grant-total mb-5">
+    <div class="col-6 col-lg-6 col-md-6">
+       <p class="substotal text-end"> <strong>Grand total:</strong></p>
+    </div>
+    <div class="col-6 col-lg-6 col-md-6">
+     <p class="substotal text-end"> ₹{{totalamount| number : '1.2-2'}}</p>
+
+     <div class="cart-actions mt-5">
+      <a class="btn btn-primary float-end" href="" title="Click here to proceed to checkout" routerLink="/checkout">Check out</a>
+  </div>
+  </div>
+ </div>
+    </div>
+
+
+    </div>
+
+    
+  </div>
+
+  <div class="cart-card mt-5 mb-5" *ngIf="showProduct.length==0;">
+    <h4>Your is Empty</h4>
+    <h6>Please Add Item</h6>
+    <button class="btn btn-dark" routerLink="/"> Shop Now</button>
+  </div>
+
+</div>
+
+<div class="clearfix"></div>

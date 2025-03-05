@@ -1,0 +1,130 @@
+// media aliases and breakpoints
+$screen-sm-min: 600px;
+$screen-md-min: 768px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+$screen-xs-min: 320px;
+
+$screen-xs-max: 599px;
+$screen-sm-max: 959px;
+$screen-md-max: 960px;
+$screen-lg-max: 1919px;
+$screen-xl-max: 5000px;
+
+// media devices
+
+    @media only screen and (min-width: #{$screen-xs-min}) and (max-width: #{$screen-xs-max}) {
+    .seachBoxContainer{
+        margin-top: 15px;
+    }
+    i.fi.fi-ts-circle-user, i.fi.fi-tr-cart-shopping-fast {
+        position: relative;
+        top: 4px;
+    }
+     .sb-banner .banners, .shopcategorydtls, .trenditemsdtls {
+      -ms-flex: 0 0 50% !important;
+      flex: 0 0 50% !important;
+  }
+ .block-content {
+    overflow-x: scroll;
+    scrollbar-width: none
+}
+}
+
+
+  @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+    
+}
+
+
+@media only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    .module{
+      margin-bottom: 30px
+    }
+    .collapse:not(.show){
+      display: none !important;
+    }
+    .navbar-expand-md .navbar-toggler{
+      display: inline;
+    }
+    .navbar-expand-md .navbar-nav {
+      flex-direction: column;
+  }
+  .seachBoxContainer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.sb-banner .banners, .shopcategorydtls, .trenditemsdtls {
+  -ms-flex: 0 0 33% !important;
+  flex: 0 0 33% !important;
+}
+.block-content {
+overflow-x: scroll;
+scrollbar-width: none
+}
+  }
+
+
+@mixin lg {
+  @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// media lt queries
+@mixin lt-sm {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin lt-md {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin lt-lg {
+  @media screen and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lt-xl {
+  @media screen and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// media gt queries
+@mixin gt-xs {
+  @media screen and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+
+  @media screen and (min-width: #{$screen-md-min}) {
+  .module{
+    margin: 30px auto;
+  }
+ 
+}
+
+@mixin gt-md {
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin gt-lg {
+  @media screen and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
